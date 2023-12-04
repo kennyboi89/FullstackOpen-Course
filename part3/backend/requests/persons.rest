@@ -1,0 +1,15 @@
+POST http://localhost:3001/api/persons HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Ken Nguyen",
+    "number": "2323-3434"
+}
+
+###
+
+DELETE http://localhost:3001/api/person/3
+
+###
+
+GET http://localhost:3001/api/persons/
