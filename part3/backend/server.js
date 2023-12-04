@@ -1,7 +1,13 @@
 const express = require("express");
+const cors = require('cors')
 var morgan = require("morgan");
+const corsOptions = {
+  origin: 'http://localhost:5173',
+};
+
 const app = express();
 app.use(express.json());
+app.use(cors(corsOptions))
 
 morgan.token('response', function getResponse (request) {
   return JSON.stringify(request.body)
@@ -59,7 +65,7 @@ app.get("/api/info", (request, response) => {
   );
 });
 
-app.get("/api/person/:id", (request, response) => {
+app.get("/api/persons/:id", (request, response) => {
   const id = Number(request.params.id);
   const person = persons.find((person) => person.id === id);
 
@@ -70,7 +76,7 @@ app.get("/api/person/:id", (request, response) => {
   }
 });
 
-app.delete("/api/person/:id", (request, response) => {
+app.delete("/api/persons/:id", (request, response) => {
   const id = Number(request.params.id);
   persons = persons.filter((person) => person.id != id);
 
@@ -101,3 +107,4 @@ const PORT = 3001;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
+
