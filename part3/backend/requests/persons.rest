@@ -3,13 +3,18 @@ content-type: application/json
 
 {
     "name": "Ken Nguyen",
-    "number": "2323-3434"
+    "number": 23233434
 }
 
 ###
 
-DELETE http://localhost:3001/api/person/3
+DELETE http://localhost:3001/api/persons/656e682839cab345f445bb61
+
 
 ###
 
 GET http://localhost:3001/api/persons/
+
+###
+GET http://localhost:3001/api/persons/656e682839cab345f445bb61
+
