@@ -3,7 +3,7 @@ content-type: application/json
 
 {
     "name": "Ken Nguyen",
-    "number": 23233434
+    "number": "s"
 }
 
 ###
@@ -18,3 +18,14 @@ GET http://localhost:3001/api/persons/
 ###
 GET http://localhost:3001/api/persons/656e682839cab345f445bb61
 
+###
+PUT  http://localhost:3001/api/persons HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Ken Nguyen",
+    "number": 23233434
+}
+
+###
+GET http://localhost:3001/api/info
