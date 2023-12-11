@@ -3,10 +3,31 @@ GET http://localhost:3003/api/blogs
 ###
 POST http://localhost:3003/api/blogs HTTP/1.1
 content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImtlbjQiLCJpZCI6IjY1NzUwNGNmZjBhNzExMGJlMTU3NjYwMyIsImlhdCI6MTcwMjI1MTU1MCwiZXhwIjoxNzAyMjU1MTUwfQ.do4fFqbR7i2nrsJ57dOltMafLyu3chJhbG14_4MIzBc
 
 {
-    "title": "How to develop fast",
+    "title": "How to develop fastest",
     "author": "Ken Nguyen",
     "url": "www.blog.dev.faster",
+    "likes": 3,
+    "userid": "657502d173774f2228d04b00"
+}
+
+###
+POST http://localhost:3003/api/blogs HTTP/1.1
+content-type: application/json
+
+{
+    "author": "Ken Nguyen",
+    "likes": 3
+}
+
+###
+DELETE http://localhost:3003/api/blogs/ HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImtlbjQiLCJpZCI6IjY1NzUwNGNmZjBhNzExMGJlMTU3NjYwMyIsImlhdCI6MTcwMjI1MTU1MCwiZXhwIjoxNzAyMjU1MTUwfQ.do4fFqbR7i2nrsJ57dOltMafLyu3chJhbG14_4MIzBc
+
+{
+    "author": "Ken Nguyen",
     "likes": 3
 }
